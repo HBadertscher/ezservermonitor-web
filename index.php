@@ -213,6 +213,7 @@ $update = $Config->checkUpdate();
 
     <div class="cls"></div>
 
+    <?php if ($Config->get('gpu:enable') == true): ?>
     <div class="box" id="esm-gpu">
         <div class="box-header">
             <h1>GPU usage</h1>
@@ -238,6 +239,7 @@ $update = $Config->checkUpdate();
             </table>
         </div>
     </div>
+    <?php endif; ?>
 
     <div class="box" id="esm-disk">
         <div class="box-header">
