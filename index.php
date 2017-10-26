@@ -230,9 +230,9 @@ $update = $Config->checkUpdate();
                   <th>Temperature</th>
                   <th>GPU Utilization</th>
                   <th>Memory Utilization</th>
-                  <th>Memory total</th>
-                  <th>Memory used</th>
                   <th>Memory free</th>
+                  <th>Memory used</th>
+                  <th>Memory total</th>
                 </thead>
                 <tbody>
                 </tbody>
