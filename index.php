@@ -213,7 +213,31 @@ $update = $Config->checkUpdate();
 
     <div class="cls"></div>
 
+    <div class="box" id="esm-gpu">
+        <div class="box-header">
+            <h1>GPU usage</h1>
+            <ul>
+                <li><a href="#" class="reload" onclick="esm.reloadBlock('gpu');"><span class="icon-cycle"></span></a></li>
+            </ul>
+        </div>
 
+        <div class="box-content">
+            <table>
+                <thead>
+                  <th>ID</th>
+                  <th>GPU Type</th>
+                  <th>Temperature</th>
+                  <th>GPU Utilization</th>
+                  <th>Memory Utilization</th>
+                  <th>Memory total</th>
+                  <th>Memory used</th>
+                  <th>Memory free</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
     <div class="box" id="esm-disk">
         <div class="box-header">

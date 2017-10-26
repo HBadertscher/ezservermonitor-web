@@ -294,10 +294,43 @@ esm.getServices = function() {
 
 }
 
+esm.getGpu = function() {
+
+    var module = 'gpu';
+
+    esm.reloadBlock_spin(module);
+
+    $.get('libs/'+module+'.php', function(data) {
+
+        var $box = $('.box#esm-'+module+' .box-content tbody');
+        $box.empty();
+
+        for (var line in data) {
+            var html = '<tr>';
+            html += '<td class="t-center">'+data[line].id+'</td>';
+            html += '<td class="t-center">'+data[line].model+'</td>';
+            html += '<td class="t-center">'+data[line].temperature+'</td>';
+            html += '<td class="t-center">'+data[line].utilization+'</td>';
+            html += '<td class="t-center">'+data[line].memory_util+'</td>';
+            html += '<td class="t-center">'+data[line].memory_total+'</td>';
+            html += '<td class="t-center">'+data[line].memory_free+'</td>';
+            html += '<td class="t-center">'+data[line].memory_used+'</td>';
+            html += '</tr>';
+            $box.append(html);
+        }
+
+        esm.reloadBlock_spin(module);
+
+    }, 'json');
+
+}
+
+
 
 esm.getAll = function() {
     esm.getSystem();
     esm.getCpu();
+    esm.getGpu();
     esm.getLoad_average();
     esm.getMemory();
     esm.getSwap();
@@ -361,6 +394,7 @@ esm.mapping = {
     system: esm.getSystem,
     load_average: esm.getLoad_average,
     cpu: esm.getCpu,
+    gpu: esm.getGpu,
     memory: esm.getMemory,
     swap: esm.getSwap,
     disk: esm.getDisk,
