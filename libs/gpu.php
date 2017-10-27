@@ -17,8 +17,8 @@ foreach(array_slice($gpu_info_array, 1, -1) as $row)
     'id' => trim($this_gpu[0]),
     'model' => trim($this_gpu[1]),
     'temperature' => trim($this_gpu[2])." °C",
-    'utilization' => trim($this_gpu[3]),
-    'memory_util' => trim($this_gpu[4]),
+    'utilization' => trim(str_replace("%", "", $this_gpu[3])),
+    'memory_util' => trim(str_replace("%", "", $this_gpu[4])),
     'memory_total' => trim($this_gpu[5]),
     'memory_free' => trim($this_gpu[6]),
     'memory_used' => trim($this_gpu[7])

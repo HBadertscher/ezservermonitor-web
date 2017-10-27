@@ -225,8 +225,8 @@ $update = $Config->checkUpdate();
         <div class="box-content">
             <table>
                 <thead>
-                  <th>ID</th>
-                  <th>GPU Type</th>
+                  <th class="t-left">ID</th>
+                  <th class="t-left">GPU Type</th>
                   <th>Temperature</th>
                   <th>GPU Utilization</th>
                   <th>Memory Utilization</th>
