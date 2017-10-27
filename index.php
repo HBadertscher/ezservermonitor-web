@@ -227,9 +227,10 @@ $update = $Config->checkUpdate();
                 <thead>
                   <th class="t-left">ID</th>
                   <th class="t-left">GPU Type</th>
+                  <th>Clock Speed</th>
+                  <th>Power</th>
                   <th>Temperature</th>
                   <th>GPU Utilization</th>
-                  <th>Memory Utilization</th>
                   <th>Memory free</th>
                   <th>Memory used</th>
                   <th>Memory total</th>

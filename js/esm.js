@@ -316,21 +316,13 @@ esm.getGpu = function() {
             else
                 util_bar_color = 'green';
 
-            // Memory bar
-            mem_util_bar_color = '';
-            if (data[line].memory_util <= 50)
-                mem_util_bar_color = 'red';
-            else if (data[line].memory_util <= 75)
-                mem_util_bar_color = 'orange';
-            else
-                mem_util_bar_color = 'green';
-
             var html = '<tr>';
             html += '<td class="t-left">'+data[line].id+'</td>';
             html += '<td class="t-left">'+data[line].model+'</td>';
+            html += '<td class="t-center">'+data[line].speed+'</td>';
+            html += '<td class="t-center">'+data[line].power+'</td>';
             html += '<td class="t-center">'+data[line].temperature+'</td>';
             html += '<td class="t-center w20p"><div class="progressbar-wrap"><div class="progressbar '+util_bar_color+'" style="width: '+data[line].utilization+'%;">'+data[line].utilization+'%</div></div></td>';
-            html += '<td class="t-center w20p"><div class="progressbar-wrap"><div class="progressbar '+mem_util_bar_color+'" style="width: '+data[line].memory_util+'%;">'+data[line].memory_util+'%</div></div></td>';
             html += '<td class="t-center">'+data[line].memory_free+'</td>';
             html += '<td class="t-center">'+data[line].memory_used+'</td>';
             html += '<td class="t-center">'+data[line].memory_total+'</td>';
