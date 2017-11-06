@@ -234,6 +234,7 @@ $update = $Config->checkUpdate();
                   <th>Memory free</th>
                   <th>Memory used</th>
                   <th>Memory total</th>
+                  <th>Users</th>
                 </thead>
                 <tbody>
                 </tbody>

@@ -326,6 +326,7 @@ esm.getGpu = function() {
             html += '<td class="t-center">'+data[line].memory_free+'</td>';
             html += '<td class="t-center">'+data[line].memory_used+'</td>';
             html += '<td class="t-center">'+data[line].memory_total+'</td>';
+            html += '<td class="t-center">'+data[line].users+'</td>';
             html += '</tr>';
             $box.append(html);
         }
