@@ -35,9 +35,9 @@ foreach($gpu_info_array as $row)
     foreach($list_of_processes as $process)
     {
       $this_user = shell_exec('ps -o user -p '.$process.' --noheader');
-      $list_of_users = $list_of_users.array_push(trim($this_user));
+      $list_of_users[] = trim($this_user);
     }
-    $users = implode(', ', $list_of_users);
+    $users = implode(', ', array_unique($list_of_users));
   }
 
   // Create response
