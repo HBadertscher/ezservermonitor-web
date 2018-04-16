@@ -19,6 +19,7 @@
         "ignore_mounts": []
     },
     "ping": {
+        "enable": true,
         "hosts": [
             "facebook.com",
             "google.com",
@@ -30,6 +31,7 @@
         "max": 5
     },
     "services": {
+        "enable": true,
         "show_port": true,
         "list": [
             {
