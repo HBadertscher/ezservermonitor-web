@@ -213,7 +213,35 @@ $update = $Config->checkUpdate();
 
     <div class="cls"></div>
 
+    <?php if ($Config->get('gpu:enable') == true): ?>
+    <div class="box" id="esm-gpu">
+        <div class="box-header">
+            <h1>GPU usage</h1>
+            <ul>
+                <li><a href="#" class="reload" onclick="esm.reloadBlock('gpu');"><span class="icon-cycle"></span></a></li>
+            </ul>
+        </div>
 
+        <div class="box-content">
+            <table>
+                <thead>
+                  <th class="t-left">ID</th>
+                  <th class="t-left">GPU Type</th>
+                  <th>Clock Speed</th>
+                  <th>Power</th>
+                  <th>Temperature</th>
+                  <th>GPU Utilization</th>
+                  <th>Memory free</th>
+                  <th>Memory used</th>
+                  <th>Memory total</th>
+                  <th>Users</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <?php endif; ?>
 
     <div class="box" id="esm-disk">
         <div class="box-header">
